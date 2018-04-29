@@ -1,0 +1,113 @@
+html, body, #wrapper {
+    height: 100%;
+    overflow: hidden;
+}
+
+#wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-family: var(--font);
+}
+
+#bg {
+    background-image: var(--bg);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -10;
+}
+
+header {
+    overflow: hidden;
+}
+
+footer {
+    color: var(--text-color-2);
+    margin-top: 1em;
+    font-size: 1.5vh;
+}
+
+section {
+    font-size: calc(12px + 0.5vw);
+    overflow: hidden;
+}
+
+.content {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    width: calc(40% + 5vw);
+    min-height: 55%;
+    box-shadow: 0px 4px 4px 1px rgba(0, 0, 0, 0.2);
+    border-left: 6px solid var(--accent-color);
+    border-right: 6px solid var(--accent-color);
+}
+
+@media only screen and (max-width: 768px) {
+    .content {
+        width: 75%;
+        min-height: 55%;
+        max-height: 90%;
+    }
+}
+
+#grid-1 {
+    grid-row: 1;
+}
+
+#grid-2 {
+    display: flex;
+    grid-row: 2;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#grid-3 {
+    grid-row: 3;
+}
+
+.box {
+    --padding: 0.5em;
+
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    padding: var(--padding) calc(var(--padding) + 1em) var(--padding) calc(var(--padding) + 1em);
+    border-radius: 6px;
+}
+
+.scroll {
+    animation: scroll var(--bg-scroll-time) linear infinite;
+}
+
+.center {
+    text-align: center;
+}
+
+.center-img {
+    display: inline-block;
+    margin: auto;
+}
+
+.title {
+    font-size: calc(12px + 2vw);
+}
+
+.title-2 {
+    font-size: calc(8px + 1vw);
+    color: var(--text-color-2);
+    line-height: 0.1rem;
+}
+
+@keyframes scroll {
+    from {
+        background-position: 0 0;
+    }
+    to {
+        background-position: var(--bg-width) 0;
+    }
+}

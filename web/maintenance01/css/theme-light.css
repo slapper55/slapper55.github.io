@@ -1,0 +1,11 @@
+:root {
+    --bg-color: #fbfbfb;
+    --text-color: #20262E;
+    --text-color-2: #30363E;
+    --accent-color: #9F78D7;
+    --theme-color: var(--bg-color);
+    --font: 'Roboto','Tahoma',sans-serif;
+    --bg: url("../img/bg-light.png");
+    --bg-width: 190px;
+    --bg-scroll-time: 4s;
+}
